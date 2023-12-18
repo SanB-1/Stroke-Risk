@@ -6,7 +6,7 @@ from sklearn.preprocessing import LabelEncoder
 from sklearn.metrics import confusion_matrix, classification_report
 from imblearn.over_sampling import RandomOverSampler
 
-url = 'https://raw.githubusercontent.com/SanB-1/Stroke-Prediction/main/stroke.csv'
+url = 'https://raw.githubusercontent.com/SanB-1/Stroke-Risk/main/stroke.csv'
 df = pd.read_csv(url)
 df = df.dropna()
 df = df.drop(['id'], axis=1)
