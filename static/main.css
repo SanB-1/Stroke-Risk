@@ -1,0 +1,46 @@
+h1, h2 {
+  color: #c1c1c1;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+h4 {
+  color: #c1c1c1;
+  font-family: sans-serif;
+}
+
+label {
+  color: #c1c1c1;
+}
+
+h3 {
+  color: lightgrey;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: #aaa
+}
+
+header {
+  background-color: #222;
+  padding: 20px;
+}
+
+a:link {
+  color: blue;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #5205aa;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #5205aa;
+  background-color: transparent;
+  text-decoration: underline;
+}

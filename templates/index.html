@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href='/static/main.css' />
+  <title>Stroke Risk Assesment</title>  
+</head>
+
+<body style="background: #000;">
+  
+  <header>
+    <h1>Stroke Risk Assessment</h1>
+  </header>
+  
+ <div>
+    <center>
+    <form action="{{ url_for('stroke_risk')}}"method="post">
+      <p></p>
+      <label>Gender ...........................................................................................................................................</label>
+      <input type="text" name="gender" required="required" size=20/><p>
+      <label>Age ................................................................................................................................................</label>
+      <input type="text" name="age" required="required" size=20/><p>
+      <label>Hypertension:    [0] No [1] Yes ........................................................................................................</label>
+      <input type="text" name="hypertension" required="required" size=20/><p>
+      <label>Heart Diseases:    [0] No [1] Yes ......................................................................................................</label>
+      <input type="text" name="heart disease" required="required" size=20/><p>
+      <label>Ever Married:    [0] No [1] Yes  .........................................................................................................</label>
+      <input type="text" name="married" required="required" size=20/><p>
+      <label>Work Type:  [0] Childcare [1] Government Job [2] Never Worked [3] Private [4] Self Employed </label>
+      <input type="text" name="work type" required="required" size=20/><p>
+      <label>Residence type:    [0] Rural [1] Urban ..............................................................................................</label>
+      <input type="text" name="residence" required="required" size=20/><p>
+      <label>Average Blood Glucose Level ........................................................................................................</label>
+      <input type="text" name="glucose" required="required" size=20/><p>
+      <label>BMI ................................................................................................................................................</label>
+      <input type="text" name="bmi" required="required" size=20/><p>
+      <label>Smoking Status:    [0] Former Smoker [1] Never Smoked [2] Smoker [3] Unknown ......................</label>
+      <input type="text" name="smoke" required="required" size=20/><p>
+      <button type="submit" class="btn">What's my stroke risk?</button></p>
+    </form>
+    </center>
+   <br>
+   <br>
+   <h3> {{ output }}</h3>
+   <h3> Learn more about strokes <a href="https://www.cdc.gov/stroke/about.htm">here.</a></h3>
+   <h3> Learn more about stroke prevention <a href="https://www.cdc.gov/stroke/prevention.htm">here.</a></h3>
+ </div>
+  
+ <div>
+   <br><br>
+   <h4>Instructions: Fill each box with numerical values. For numbered options, type the value to the left of your selected option.</h4>
+   <br><br>
+   <h4>Our predictions are based on real anonymous data shared by patients like you, in this section we explain how the data was analyzed to create this tool. Some technical knowledge might be needed to understand this section.</h4><br>
+   <h4>The relationship between age and stroke ocurrence is visualized with a bar plot and a box plot. Strokes appear to be more prevalent in older patients.</h4>
+   <img src="https://github.com/SanB-1/Stroke-Risk/blob/main/resources/age_stroke.png?raw=true">
+   <img src="https://github.com/SanB-1/Stroke-Risk/blob/main/resources/age_stroke_box.png?raw=true">
+   <br><h4>On this heatmap, we can see the correlation between different features and stroke risk. Only binary (0 and 1 values) and numerical features are used for this graph. Features with a value closer to one have a higher correlation with stroke risk as they get higher, features with a value closer to -1 have a lower correlation with stroke risk as they get higher. Values close to 0 either have no correlation with stroke risk or have a non-linear distribution.</h4>
+   <img src="https://github.com/SanB-1/Stroke-Risk/blob/main/resources/correlations.png?raw=true">
+   <br><h4>The following graph is called a confusion matrix, it allows us to measure the accuracy of the machine learning model used to predict your risk of stroke. We can see that our software showed no false negatives and only 13 false positives when tested.</h4>
+   <img src="https://github.com/SanB-1/Stroke-Risk/blob/main/resources/confusion_matrix.png?raw=true">
+ </div>
+
+</body>
+</html>
