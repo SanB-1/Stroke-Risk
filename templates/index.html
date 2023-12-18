@@ -14,8 +14,8 @@
   </header>
   
  <div>
-    <center>
-    <form action="{{ url_for('stroke_risk')}}"method="post">
+   <center>
+   <form action="{{ url_for('stroke_risk')}}"method="post">
       <p></p>
       <label>Gender ...........................................................................................................................................</label>
       <input type="text" name="gender" required="required" size=20/><p>
@@ -38,11 +38,11 @@
       <label>Smoking Status:    [0] Former Smoker [1] Never Smoked [2] Smoker [3] Unknown ......................</label>
       <input type="text" name="smoke" required="required" size=20/><p>
       <button type="submit" class="btn">What's my stroke risk?</button></p>
-    </form>
-    </center>
+   </form>
    <br>
    <br>
    <h3> {{ output }}</h3>
+   </center>
    <h3> Learn more about strokes <a href="https://www.cdc.gov/stroke/about.htm">here.</a></h3>
    <h3> Learn more about stroke prevention <a href="https://www.cdc.gov/stroke/prevention.htm">here.</a></h3>
  </div>
